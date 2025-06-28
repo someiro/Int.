@@ -1,8 +1,7 @@
-import "./Int.css";
-import { format } from "@formkit/tempo"
+import { format } from "@formkit/tempo";
 
 function App() {
-  const readable = format(new Date(), "YYYY")
+  const readable = format(new Date(), "YYYY");
   return (
     <>
       <div className="intHeader">
@@ -18,12 +17,17 @@ function App() {
       <div className="intContainer intTextCenter">
         <h1 className="intTextVeryLarge intAddMargin">Int.</h1>
         <p className="intTextSmall intAddMargin">Minimum Design System</p>
+        <a href="https:/int.some16.com/Int.css" download="Int.css">
+          <button className="intButton intAddMargin">Download Int.css</button>
+        </a>
       </div>
-      <div className="intContainer intRemoveBackgroundColor intRemovePadding intTextVerySmall">
-        <p className="intTextCenter intAddPadding">Copyright (c) {readable} someiro. All Rights Reserved.</p>
-      </div>
+        <div className="intContainer intRemoveBackgroundColor intRemovePadding intTextVerySmall">
+          <p className="intTextCenter intAddPadding">
+            Copyright (c) {readable} someiro. All Rights Reserved.
+          </p>
+        </div>
     </>
-  )
+  );
 }
 
 export default App;
