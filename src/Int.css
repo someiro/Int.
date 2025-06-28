@@ -87,7 +87,7 @@ body {
     background: var(---mainColor);
     border-radius: 30px;
     color: #f2f2f2;
-    transition: 0.3s;
+    transition: 0.1s;
 
 }
 .intButton:hover {
@@ -106,7 +106,7 @@ body {
     border-radius: 30px;
     color: var(---mainColor);
     background: var(---secondaryBaseColor);
-    transition: 0.3s;
+    transition: 0.1s;
 }
 .intOutlinedButton:hover {
     background: #e6e6e6;
