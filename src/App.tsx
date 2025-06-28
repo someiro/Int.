@@ -1,4 +1,4 @@
-import "./app.css";
+import "./Int.css";
 import { format } from "@formkit/tempo"
 
 function App() {
