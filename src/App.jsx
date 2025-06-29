@@ -1,31 +1,18 @@
-import { format } from "@formkit/tempo";
+import { Header, Footer, Home, About, Components } from "./pageIndex.jsx";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
-  const readable = format(new Date(), "YYYY");
   return (
     <>
-      <div className="intHeader">
-        <div className="intHeaderContainer">
-          <h1>Int.</h1>
-          <div className="intHeaderMenu">
-            <button className="intButton">About</button>
-            <button className="intButton">Components</button>
-            <button className="intOutlinedButton">GitHub</button>
-          </div>
-        </div>
-      </div>
-      <div className="intContainer intTextCenter">
-        <h1 className="intTextVeryLarge intAddMargin">Int.</h1>
-        <p className="intTextSmall intAddMargin">Minimum Design System</p>
-        <a href="/Int.css" download="Int.css">
-          <button className="intButton intAddMargin">Download Int.css</button>
-        </a>
-      </div>
-        <div className="intContainer intRemoveBackgroundColor intRemovePadding intTextVerySmall">
-          <p className="intTextCenter intAddPadding">
-            Copyright (c) {readable} someiro. All Rights Reserved.
-          </p>
-        </div>
+      <Header />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/about" element={<Components />} />
+      </Routes>
+      
+      <Footer />
     </>
   );
 }
