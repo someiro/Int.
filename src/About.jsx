@@ -1,7 +1,6 @@
 function About() {
   return (
-    <>
-    </>
+    <></>
   );
 }
 

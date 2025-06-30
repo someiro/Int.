@@ -6,12 +6,15 @@ function App() {
     <>
       <Header />
 
+      <div className="intContainer">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/about" element={<Components />} />
+        <Route path="/components" element={<Components />} />
       </Routes>
-      
+
+      </div>
+
       <Footer />
     </>
   );

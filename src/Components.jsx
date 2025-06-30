@@ -1,8 +1,5 @@
-function Components() {
-  return (
-    <>
-    </>
-  );
-}
+const Components = () => {
+  return <></>;
+};
 
 export default Components;
