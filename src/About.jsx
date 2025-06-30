@@ -2,7 +2,7 @@ function About() {
   return (
     <>
       <div className="intContentView intTextCenter intAddMarginTop">
-        <h1 className="intTextVeryLarge">About</h1>
+        <h1 className="intTextVeryLarge">About Int.</h1>
       </div>
       <div className="intContentView intAddMarginTop">
         <h2>Hello, Int.</h2>

@@ -78,13 +78,6 @@ body {
   }
 }
 
-/* intSidebarStackContainer  */
-
-.intSidebarStackContainer {
-  display: flex;
-  height: 100vh;
-}
-
 /* intHeader */
 
 .intHeader {
@@ -356,4 +349,33 @@ body {
 
 .intStackView {
   width: 100%;
+}
+
+/* intSidebarStackContainer  */
+
+.intSidebarStackContainer {
+  display: flex;
+  height: 100vh;
+}
+
+@media (width < 800px) {
+  .intSidebarStackContainer {
+    flex-direction: column;
+  }
+  .intSidebarView {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: var(---subColor);
+  }
+  .intBtnsContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 13px;
+  }
+  .intBtnsContainer button {
+    margin: 0;
+    width: 100%;
+  }
 }

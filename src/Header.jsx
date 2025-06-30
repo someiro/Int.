@@ -1,6 +1,8 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
+  const location = useLocation().pathname;
+
   return (
     <div className="intHeader">
       <div className="intHeaderContainer">
@@ -8,12 +10,16 @@ const Header = () => {
           <h1 className="intTextColorBlack">Int.</h1>
         </Link>
         <div className="intHeaderMenu">
-          <Link to="/about">
-            <button className="intButton">About</button>
-          </Link>
-          <Link to="/components">
-            <button className="intButton">Components</button>
-          </Link>
+          {location !== "/about" && location !== "/components" ? (
+            <>
+              <Link to="/about">
+                <button className="intButton">About Int.</button>
+              </Link>
+              <Link to="/components">
+                <button className="intButton">Components</button>
+              </Link>
+            </>
+          ) : null}
         </div>
       </div>
     </div>

@@ -4,15 +4,15 @@ function SidebarButtons(props) {
   const location = props.location;
 
   return (
-    <>
+    <div className="intBtnsContainer">
       <Link to="/about">
         {location === "/about" ? (
           <button className="intButton intWidth100 intAddMarginTop">
-            About
+            About Int.
           </button>
         ) : (
           <button className="intOutlinedButton intWidth100 intAddMarginTop">
-            About
+            About Int.
           </button>
         )}
       </Link>
@@ -27,8 +27,8 @@ function SidebarButtons(props) {
             Components
           </button>
         )}
-      </Link>
-    </>
+      </Link>  
+    </div>
   );
 }
 
