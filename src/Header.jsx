@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <div className="intHeader">
       <div className="intHeaderContainer">
-        <Link className="intTextDeco" to="/">
+        <Link className="intRemoveTextDeco" to="/">
           <h1 className="intTextColorBlack">Int.</h1>
         </Link>
         <div className="intHeaderMenu">

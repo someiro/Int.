@@ -1,3 +1,5 @@
+/* Reset CSS */
+
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
 
 :root {
@@ -20,6 +22,17 @@
   -webkit-appearance: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
+}
+
 input,
 textarea {
   outline: none;
@@ -31,7 +44,7 @@ hr {
 }
 
 a {
-    color: #378ad8;
+  color: #378ad8;
 }
 
 body {
@@ -40,16 +53,39 @@ body {
   background: var(---baseColor);
 }
 
+/* intContainer System */
+
 .intContainer {
   margin-right: auto;
   margin-left: auto;
 }
-.intBoxContainer {
-  background-color: var(---secondaryBaseColor);
-  padding: 30px;
-  margin-bottom: 43px;
-  border-radius: 30px 30px 30px 30px;
+
+@media (width >= 800px) {
+  .intContainer {
+    width: 750px;
+  }
 }
+
+@media (width >= 1020px) {
+  .intContainer {
+    width: 970px;
+  }
+}
+
+@media (width >= 1220px) {
+  .intContainer {
+    width: 1170px;
+  }
+}
+
+/* intSidebarStackContainer  */
+
+.intSidebarStackContainer {
+  display: flex;
+  height: 100vh;
+}
+
+/* intHeader */
 
 .intHeader {
   background-color: var(---baseColor);
@@ -59,6 +95,7 @@ body {
   position: sticky;
   top: 0;
 }
+
 .intHeaderContainer {
   padding-right: 13px;
   padding-left: 13px;
@@ -70,40 +107,38 @@ body {
   align-items: center;
 }
 
-@media (width >= 800px) {
-  .intContainer,
-  .intHeaderContainer {
-    width: 750px;
-  }
-}
-
-@media (width >= 1020px) {
-  .intContainer,
-  .intHeaderContainer {
-    width: 970px;
-  }
-}
-
-@media (width >= 1220px) {
-  .intContainer,
-  .intHeaderContainer {
-    width: 1170px;
-  }
-}
-
 .intHeaderMenu {
   display: flex;
   flex-wrap: wrap;
   gap: 11px;
 }
 
-.intWidth100 {
-  width: 100%;
+@media (width >= 800px) {
+  .intHeaderContainer {
+    width: 750px;
+  }
 }
 
-.intTextDeco {
-    text-decoration: none;
+@media (width >= 1020px) {
+  .intHeaderContainer {
+    width: 970px;
+  }
 }
+
+@media (width >= 1220px) {
+  .intHeaderContainer {
+    width: 1170px;
+  }
+}
+
+/* intFooter */
+
+.intFooter {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+/* intButton */
 
 .intButton {
   padding: 13px;
@@ -139,9 +174,31 @@ body {
   border-radius: 10px;
 }
 
+/* Built-in Function */
+
+/* width / height */
+
+.intWidth100 {
+  width: 100%;
+}
+.intHeight100 {
+  height: 100%;
+}
+
+/* text align */
+
+.intTextRight {
+  text-align: right;
+}
+.intTextLeft {
+  text-align: left;
+}
 .intTextCenter {
   text-align: center;
 }
+
+/* text size */
+
 .intTextLarge {
   font-size: 60px;
 }
@@ -154,16 +211,50 @@ body {
 .intTextVerySmall {
   font-size: 11px;
 }
+
+/* text color */
+
 .intTextColorBlack {
-    color: #131313;
+  color: #131313;
 }
 .intTextColorWhite {
-    color: #f5f5f5;
+  color: #f5f5f5;
+}
+.intTextColorRed {
+  color: #e06161;
+}
+.intTextColorBlue {
+  color: #3e8bd3;
+}
+.intTextColorYellow {
+  color: #e0d53a;
+}
+.intTextColorGreen {
+  color: #46bf58;
 }
 
-.intRemoveBackgroundColor {
-  background: none;
+/* background color  */
+
+.intBgColorBlack {
+  background: #131313;
 }
+.intBgColorWhite {
+  background: #f5f5f5;
+}
+.intBgColorRed {
+  background: #e06161;
+}
+.intBgColorBlue {
+  background: #3e8bd3;
+}
+.intBgColorYellow {
+  background: #e0d53a;
+}
+.intBgColorGreen {
+  background: #46bf58;
+}
+
+/* add padding / margin */
 
 .intAddPadding {
   padding: 13px;
@@ -186,6 +277,22 @@ body {
   margin-bottom: 13px;
 }
 
+.intAddPaddingRight {
+  padding-right: 13px;
+}
+.intAddMarginRight {
+  margin-right: 13px;
+}
+
+.intAddPaddingLeft {
+  padding-left: 13px;
+}
+.intAddMarginLeft {
+  margin-left: 13px;
+}
+
+/* remove padding / margin */
+
 .intRemovePadding {
   padding: 0px;
 }
@@ -193,14 +300,60 @@ body {
   margin: 0px;
 }
 
-.intSidebarStackContainer {
-  display: flex;
+.intRemovePaddingTop {
+  padding-top: 0px;
 }
-.intSidebar {
+.intRemoveMarginTop {
+  margin-top: 0px;
+}
+
+.intRemovePaddingBottom {
+  padding-bottom: 0px;
+}
+.intRemoveMarginBottom {
+  margin-bottom: 0px;
+}
+
+.intRemovePaddingRight {
+  padding-right: 0px;
+}
+.intRemoveMarginRight {
+  margin-right: 0px;
+}
+
+.intRemovePaddingLeft {
+  padding-left: 0px;
+}
+.intRemoveMarginLeft {
+  margin-left: 0px;
+}
+
+/* remove text decoration */
+
+.intRemoveTextDeco {
+  text-decoration: none;
+}
+
+/* remove background color */
+
+.intRemoveBgColor {
+  background: none;
+}
+
+/* view */
+
+.intContentView {
+  background-color: var(---secondaryBaseColor);
+  padding: 27px;
+  border-radius: 30px 30px 30px 30px;
+}
+
+.intSidebarView {
   padding-right: 10px;
   padding-left: 10px;
-  width: 300px;
+  width: 260px;
 }
-.intMainContainer {
+
+.intStackView {
   width: 100%;
 }

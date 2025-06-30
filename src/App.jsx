@@ -1,4 +1,4 @@
-import { Header, Footer, Home, About, Components } from "./pageIndex.jsx";
+import { Header, Footer, Home, Detail } from "./pageIndex.jsx";
 import { Routes, Route } from "react-router-dom";
 
 function App() {
@@ -7,12 +7,11 @@ function App() {
       <Header />
 
       <div className="intContainer">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/components" element={<Components />} />
-      </Routes>
-
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<Detail />} />
+          <Route path="/components" element={<Detail />} />
+        </Routes>
       </div>
 
       <Footer />

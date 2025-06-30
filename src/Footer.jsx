@@ -4,8 +4,8 @@ function Footer() {
   const readable = format(new Date(), "YYYY");
 
   return (
-    <div className="intContainer intTextVerySmall">
-      <p className="intTextCenter intAddPadding">
+    <div className="intFooter">
+      <p className="intTextCenter intTextVerySmall">
         Copyright (c) {readable} someiro. All Rights Reserved.
       </p>
     </div>
