@@ -371,7 +371,7 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 13px;
+    padding: 16px;
   }
   .intBtnsContainer button {
     margin: 0;
