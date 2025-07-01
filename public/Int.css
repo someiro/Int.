@@ -355,7 +355,6 @@ body {
 
 .intSidebarStackContainer {
   display: flex;
-  height: 100vh;
 }
 
 @media (width < 800px) {
